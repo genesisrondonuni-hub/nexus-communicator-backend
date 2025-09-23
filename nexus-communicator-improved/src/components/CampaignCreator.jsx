@@ -29,7 +29,38 @@ const CampaignCreator = () => {
   const [selectedContacts, setSelectedContacts] = useState([]);
   const [mediaAttached, setMediaAttached] = useState(false);
 
-  const campaigns = [];
+  const campaigns = [
+    {
+      id: 1,
+      name: 'Promoción Verano 2024',
+      status: 'active',
+      sent: 1250,
+      opened: 890,
+      clicked: 234,
+      scheduled: '2024-01-15 10:00',
+      message: '¡Aprovecha nuestras ofertas de verano! Descuentos de hasta 50% en productos seleccionados.'
+    },
+    {
+      id: 2,
+      name: 'Newsletter Mensual',
+      status: 'scheduled',
+      sent: 0,
+      opened: 0,
+      clicked: 0,
+      scheduled: '2024-01-20 09:00',
+      message: 'Descubre las novedades de este mes y mantente al día con nuestras últimas actualizaciones.'
+    },
+    {
+      id: 3,
+      name: 'Recordatorio de Cita',
+      status: 'completed',
+      sent: 450,
+      opened: 380,
+      clicked: 120,
+      scheduled: '2024-01-10 14:00',
+      message: 'Te recordamos tu cita programada para mañana. ¡Te esperamos!'
+    }
+  ];
 
   const getStatusColor = (status) => {
     switch (status) {

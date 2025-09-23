@@ -24,7 +24,44 @@ const Contacts = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
 
-  const contacts = [];
+  const contacts = [
+    {
+      id: 1,
+      name: 'Juan Pérez',
+      email: 'juan.perez@example.com',
+      phone: '+34 612 345 678',
+      status: 'activo',
+      lastMessage: '2024-01-15',
+      tags: ['cliente', 'vip']
+    },
+    {
+      id: 2,
+      name: 'María García',
+      email: 'maria.garcia@example.com',
+      phone: '+34 698 765 432',
+      status: 'inactivo',
+      lastMessage: '2023-12-20',
+      tags: ['lead']
+    },
+    {
+      id: 3,
+      name: 'Carlos Sánchez',
+      email: 'carlos.sanchez@example.com',
+      phone: '+34 654 321 098',
+      status: 'activo',
+      lastMessage: '2024-01-10',
+      tags: ['proveedor']
+    },
+    {
+      id: 4,
+      name: 'Ana López',
+      email: 'ana.lopez@example.com',
+      phone: '+34 600 112 233',
+      status: 'activo',
+      lastMessage: '2024-01-12',
+      tags: ['cliente']
+    }
+  ];
 
   const filteredContacts = contacts.filter(contact => {
     const matchesSearch = contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||

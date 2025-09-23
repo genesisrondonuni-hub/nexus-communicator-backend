@@ -35,9 +35,96 @@ const Chat = () => {
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const contacts = [];
+  const contacts = [
+    {
+      id: 1,
+      name: 'María González',
+      avatar: 'MG',
+      status: 'online',
+      lastMessage: 'Perfecto, nos vemos mañana',
+      lastTime: '10:30',
+      unread: 2,
+      color: 'from-pink-500 to-rose-500'
+    },
+    {
+      id: 2,
+      name: 'Carlos Rodríguez',
+      avatar: 'CR',
+      status: 'away',
+      lastMessage: '¿Tienes los documentos listos?',
+      lastTime: '09:45',
+      unread: 0,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      id: 3,
+      name: 'Ana Martínez',
+      avatar: 'AM',
+      status: 'online',
+      lastMessage: 'Gracias por la información',
+      lastTime: 'Ayer',
+      unread: 1,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      id: 4,
+      name: 'Luis Fernández',
+      avatar: 'LF',
+      status: 'offline',
+      lastMessage: 'Hablamos la próxima semana',
+      lastTime: 'Ayer',
+      unread: 0,
+      color: 'from-purple-500 to-violet-500'
+    },
+    {
+      id: 5,
+      name: 'Sofia López',
+      avatar: 'SL',
+      status: 'online',
+      lastMessage: '¡Excelente trabajo!',
+      lastTime: '2 días',
+      unread: 3,
+      color: 'from-orange-500 to-amber-500'
+    }
+  ];
 
-  const sampleMessages = [];
+  const sampleMessages = [
+    {
+      id: 1,
+      text: 'Hola, ¿cómo estás?',
+      sender: 'contact',
+      time: '10:00',
+      status: 'read'
+    },
+    {
+      id: 2,
+      text: '¡Hola! Todo bien por aquí, ¿y tú?',
+      sender: 'me',
+      time: '10:02',
+      status: 'read'
+    },
+    {
+      id: 3,
+      text: 'Muy bien también. ¿Tienes tiempo para revisar el proyecto?',
+      sender: 'contact',
+      time: '10:05',
+      status: 'read'
+    },
+    {
+      id: 4,
+      text: 'Claro, déjame revisarlo y te comento',
+      sender: 'me',
+      time: '10:07',
+      status: 'delivered'
+    },
+    {
+      id: 5,
+      text: 'Perfecto, nos vemos mañana',
+      sender: 'contact',
+      time: '10:30',
+      status: 'read'
+    }
+  ];
 
   useEffect(() => {
     // Automatically select the first contact on initial render
