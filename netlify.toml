@@ -1,0 +1,4 @@
+[build]
+  base = "nexus-communicator-improved"
+  publish = "nexus-communicator-improved/dist"
+  command = "npm run build"
