@@ -34,28 +34,11 @@ import {
 const Reports = () => {
   const [selectedPeriod, setSelectedPeriod] = useState('7d');
 
-  const messageData = [
-    { date: '2024-01-08', enviados: 1200, entregados: 1150, leidos: 890, respondidos: 234 },
-    { date: '2024-01-09', enviados: 1500, entregados: 1420, leidos: 1100, respondidos: 298 },
-    { date: '2024-01-10', enviados: 1800, entregados: 1750, leidos: 1350, respondidos: 367 },
-    { date: '2024-01-11', enviados: 1600, entregados: 1580, leidos: 1200, respondidos: 289 },
-    { date: '2024-01-12', enviados: 2200, entregados: 2150, leidos: 1680, respondidos: 445 },
-    { date: '2024-01-13', enviados: 1900, entregados: 1850, leidos: 1420, respondidos: 378 },
-    { date: '2024-01-14', enviados: 1700, entregados: 1680, leidos: 1290, respondidos: 334 }
-  ];
+  const messageData = [];
 
-  const campaignPerformance = [
-    { name: 'Promoción Verano', enviados: 2500, abiertos: 1875, clicks: 625, conversiones: 125 },
-    { name: 'Newsletter', enviados: 1800, abiertos: 1260, clicks: 378, conversiones: 76 },
-    { name: 'Ofertas Especiales', enviados: 1200, abiertos: 960, clicks: 240, conversiones: 60 },
-    { name: 'Recordatorios', enviados: 800, abiertos: 640, clicks: 128, conversiones: 32 }
-  ];
+  const campaignPerformance = [];
 
-  const deviceData = [
-    { name: 'Móvil', value: 65, color: '#3b82f6' },
-    { name: 'Desktop', value: 25, color: '#8b5cf6' },
-    { name: 'Tablet', value: 10, color: '#06b6d4' }
-  ];
+  const deviceData = [];
 
   const periods = [
     { value: '7d', label: 'Últimos 7 días' },
