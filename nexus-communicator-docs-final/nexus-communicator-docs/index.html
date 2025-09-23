@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Communicator - Documentación</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .section-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-comments text-3xl"></i>
+                    <h1 class="text-2xl font-bold">Nexus Communicator</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#inicio" class="nav-link px-3 py-2 rounded transition-colors">Inicio</a>
+                    <a href="#instalacion" class="nav-link px-3 py-2 rounded transition-colors">Instalación</a>
+                    <a href="#tutoriales" class="nav-link px-3 py-2 rounded transition-colors">Tutoriales</a>
+                    <a href="#api" class="nav-link px-3 py-2 rounded transition-colors">API</a>
+                    <a href="#faq" class="nav-link px-3 py-2 rounded transition-colors">FAQ</a>
+                </nav>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-6">Documentación Completa</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Aprende a usar Nexus Communicator, la plataforma de mensajería más avanzada con IA integrada.
+                Desde la configuración inicial hasta funciones avanzadas.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#instalacion" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-rocket mr-2"></i>Comenzar Ahora
+                </a>
+                <a href="#tutoriales" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                    <i class="fas fa-play mr-2"></i>Ver Tutoriales
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Inicio Rápido</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="section-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-gray-800">1. Crear Cuenta</h4>
+                    <p class="text-gray-600">Regístrate en la plataforma y configura tu perfil empresarial.</p>
+                </div>
+                <div class="section-card bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-gray-800">2. Configurar APIs</h4>
+                    <p class="text-gray-600">Conecta WhatsApp, Gmail y Gemini para funcionalidad completa.</p>
+                </div>
+                <div class="section-card bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-gray-800">3. Enviar Mensajes</h4>
+                    <p class="text-gray-600">Crea campañas y automatiza tu comunicación con IA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="instalacion" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Instalación y Configuración</h3>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h4 class="text-2xl font-semibold mb-6 text-gray-800">
+                        <i class="fas fa-download mr-3 text-blue-600"></i>Requisitos del Sistema
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold mb-3 text-gray-700">Frontend (Netlify)</h5>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>React 18+</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Node.js 16+</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Navegador moderno</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold mb-3 text-gray-700">Backend (Servidor)</h5>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Python 3.8+</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Flask 2.0+</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>SQLite/PostgreSQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h4 class="text-2xl font-semibold mb-6 text-gray-800">
+                        <i class="fas fa-cog mr-3 text-purple-600"></i>Pasos de Instalación
+                    </h4>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h5 class="font-semibold text-lg mb-2">1. Descargar Archivos</h5>
+                            <p class="text-gray-600 mb-3">Descarga los archivos de la aplicación desde el repositorio.</p>
+                            <div class="code-block">
+                                <code>git clone https://github.com/tu-usuario/nexus-communicator.git</code>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h5 class="font-semibold text-lg mb-2">2. Configurar Backend</h5>
+                            <p class="text-gray-600 mb-3">Instala dependencias y configura la base de datos.</p>
+                            <div class="code-block">
+                                <code>cd nexus-communicator-backend<br>
+pip install -r requirements.txt<br>
+python src/main.py</code>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-purple-500 pl-6">
+                            <h5 class="font-semibold text-lg mb-2">3. Desplegar Frontend</h5>
+                            <p class="text-gray-600 mb-3">Construye y despliega en Netlify.</p>
+                            <div class="code-block">
+                                <code>cd nexus-communicator-frontend<br>
+npm install<br>
+npm run build</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section id="tutoriales" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Tutoriales Paso a Paso</h3>
+            
+            <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Tutorial Cards -->
+                <div class="section-card bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-user-cog text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800">Configuración Inicial</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Aprende a configurar tu cuenta, perfil y API keys para comenzar.</p>
+                    <a href="#config-tutorial" class="text-blue-600 font-semibold hover:text-blue-800">
+                        Ver Tutorial <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <div class="section-card bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-address-book text-green-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800">Gestión de Contactos</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Importa, organiza y gestiona tus contactos desde Excel y Google Sheets.</p>
+                    <a href="#contacts-tutorial" class="text-green-600 font-semibold hover:text-green-800">
+                        Ver Tutorial <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <div class="section-card bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-bullhorn text-purple-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800">Crear Campañas</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Diseña campañas efectivas con multimedia y asistencia de IA.</p>
+                    <a href="#campaigns-tutorial" class="text-purple-600 font-semibold hover:text-purple-800">
+                        Ver Tutorial <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <div class="section-card bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-robot text-orange-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800">Automatización con IA</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Configura respuestas automáticas inteligentes con Gemini 2.5 Pro.</p>
+                    <a href="#automation-tutorial" class="text-orange-600 font-semibold hover:text-orange-800">
+                        Ver Tutorial <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Documentation -->
+    <section id="api" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Documentación de API</h3>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h4 class="text-2xl font-semibold mb-6 text-gray-800">
+                        <i class="fas fa-code mr-3 text-blue-600"></i>Endpoints Principales
+                    </h4>
+                    
+                    <div class="space-y-6">
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">POST</span>
+                                <code class="text-lg font-mono">/api/auth/login</code>
+                            </div>
+                            <p class="text-gray-600 mb-3">Iniciar sesión en la plataforma</p>
+                            <div class="code-block">
+                                <code>{
+  "email": "usuario@ejemplo.com",
+  "password": "contraseña123"
+}</code>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">GET</span>
+                                <code class="text-lg font-mono">/api/contacts</code>
+                            </div>
+                            <p class="text-gray-600 mb-3">Obtener lista de contactos del usuario</p>
+                            <div class="code-block">
+                                <code>Authorization: Bearer {token}</code>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">POST</span>
+                                <code class="text-lg font-mono">/api/campaigns</code>
+                            </div>
+                            <p class="text-gray-600 mb-3">Crear nueva campaña de mensajería</p>
+                            <div class="code-block">
+                                <code>{
+  "name": "Campaña Promocional",
+  "message": "¡Oferta especial!",
+  "scheduled_at": "2024-01-15T10:00:00Z"
+}</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Preguntas Frecuentes</h3>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                            <i class="fas fa-question-circle mr-2 text-blue-600"></i>
+                            ¿Cómo obtengo las API keys necesarias?
+                        </h4>
+                        <p class="text-gray-600">
+                            Para WhatsApp Business API, regístrate en Meta for Developers. Para Gmail, usa Google Cloud Console. 
+                            Para Gemini, accede a Google AI Studio. Todas las guías detalladas están en la sección de tutoriales.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                            <i class="fas fa-question-circle mr-2 text-green-600"></i>
+                            ¿Puedo importar contactos desde Excel?
+                        </h4>
+                        <p class="text-gray-600">
+                            Sí, la plataforma soporta importación desde archivos Excel (.xlsx), CSV y Google Sheets. 
+                            Usa los botones "Importar de Sheets" e "Importar de Drive" en la sección de contactos.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                            <i class="fas fa-question-circle mr-2 text-purple-600"></i>
+                            ¿Cómo funciona la automatización con IA?
+                        </h4>
+                        <p class="text-gray-600">
+                            Gemini 2.5 Pro analiza los mensajes entrantes y responde automáticamente basándose en tu base de conocimiento. 
+                            Configura la información de tu negocio en Configuración > Automatización para mejores respuestas.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                            <i class="fas fa-question-circle mr-2 text-orange-600"></i>
+                            ¿Qué tipos de multimedia puedo enviar?
+                        </h4>
+                        <p class="text-gray-600">
+                            Puedes adjuntar imágenes, videos, documentos PDF, archivos de audio y documentos de texto. 
+                            El tamaño máximo por archivo es de 16MB para WhatsApp y 25MB para email.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Solución de Problemas</h3>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h4 class="text-xl font-semibold mb-4 text-red-600">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>Errores Comunes
+                        </h4>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Error de API Key inválida</h5>
+                                <p class="text-gray-600 text-sm">Verifica que las API keys estén correctamente configuradas y tengan los permisos necesarios.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Mensajes no se envían</h5>
+                                <p class="text-gray-600 text-sm">Revisa la configuración de WhatsApp Business API y que el número esté verificado.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">IA no responde automáticamente</h5>
+                                <p class="text-gray-600 text-sm">Asegúrate de que la automatización esté activada y la base de conocimiento configurada.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h4 class="text-xl font-semibold mb-4 text-green-600">
+                            <i class="fas fa-tools mr-2"></i>Soluciones Rápidas
+                        </h4>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Reiniciar conexiones</h5>
+                                <p class="text-gray-600 text-sm">Ve a Configuración > API Keys y vuelve a guardar las credenciales.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Limpiar caché del navegador</h5>
+                                <p class="text-gray-600 text-sm">Presiona Ctrl+Shift+R (Windows) o Cmd+Shift+R (Mac) para recargar completamente.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800">Verificar estado del servicio</h5>
+                                <p class="text-gray-600 text-sm">Consulta el dashboard para ver el estado de las conexiones y servicios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="text-xl font-semibold mb-4">Nexus Communicator</h5>
+                    <p class="text-gray-300">Plataforma de mensajería avanzada con IA integrada para empresas modernas.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Documentación</h5>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#instalacion" class="hover:text-white">Instalación</a></li>
+                        <li><a href="#tutoriales" class="hover:text-white">Tutoriales</a></li>
+                        <li><a href="#api" class="hover:text-white">API Reference</a></li>
+                        <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Soporte</h5>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="mailto:soporte@nexuscommunicator.com" class="hover:text-white">Email</a></li>
+                        <li><a href="#" class="hover:text-white">Chat en vivo</a></li>
+                        <li><a href="#" class="hover:text-white">Centro de ayuda</a></li>
+                        <li><a href="#" class="hover:text-white">Reportar bug</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Nexus Communicator. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        const mobileMenu = document.querySelector('nav');
+        
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
+
