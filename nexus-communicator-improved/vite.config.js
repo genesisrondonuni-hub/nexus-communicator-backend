@@ -5,7 +5,6 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/', // Explicitly set base path for production
   plugins: [react(),tailwindcss()],
   resolve: {
     alias: {
