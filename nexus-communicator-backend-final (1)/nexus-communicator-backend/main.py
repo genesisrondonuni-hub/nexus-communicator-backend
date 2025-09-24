@@ -1,21 +1,18 @@
+
 import os
-import sys
 from datetime import timedelta
-
-# DON'T CHANGE THIS !!!
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-
 from flask import Flask, send_from_directory, session
 from flask_cors import CORS
-from src.models.user import db
+from models.user import db
+from config import SECRET_KEY, JWT_ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES, DATABASE_URL, CORS_ORIGINS
 
 # Importar todas las rutas
-from src.routes.auth import auth_bp
-from src.routes.profile import profile_bp
-from src.routes.contacts import contacts_bp
-from src.routes.campaigns import campaigns_bp
-from src.routes.automation import automation_bp
-from src.routes.dashboard import dashboard_bp
+from routes.auth import auth_bp
+from routes.profile import profile_bp
+from routes.contacts import contacts_bp
+from routes.campaigns import campaigns_bp
+from routes.automation import automation_bp
+from routes.dashboard import dashboard_bp
 
 def create_app():
     """Factory function para crear la aplicación Flask"""
@@ -33,26 +30,10 @@ def create_app():
     # Configuración de CORS para permitir requests desde el frontend
     CORS(app, 
          supports_credentials=True,
-         origins=[
-             "http://localhost:5173",
-             "http://localhost:3000",
-             "https://*.netlify.app",
-             "https://*.vercel.app",
-             os.environ.get('FRONTEND_URL', '')
-         ])
+         origins=CORS_ORIGINS)
     
     # Configuración de la base de datos
-    database_url = os.environ.get('DATABASE_URL')
-    if database_url:
-        # Para PostgreSQL en producción (Render)
-        if database_url.startswith('postgres://'):
-            database_url = database_url.replace('postgres://', 'postgresql://', 1)
-        app.config['SQLALCHEMY_DATABASE_URI'] = database_url
-    else:
-        # SQLite para desarrollo local
-        db_path = os.path.join(os.path.dirname(__file__), 'database', 'app.db')
-        os.makedirs(os.path.dirname(db_path), exist_ok=True)
-        app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{db_path}"
+    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
     
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
@@ -155,7 +136,7 @@ app = create_app()
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    debug = os.environ.get('FLASK_ENV') != 'production'
+    debug = os.environ.get('FLASK_ENV') == 'development'
     
     print(f"🚀 Iniciando Nexus Communicator Backend...")
     print(f"📍 Puerto: {port}")
