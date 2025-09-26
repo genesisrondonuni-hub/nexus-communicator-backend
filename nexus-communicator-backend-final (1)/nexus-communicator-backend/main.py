@@ -13,6 +13,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Health check endpoint for Render
+@app.get("/health", status_code=200)
+async def health_check():
+    return {"status": "ok"}
+
+# Root endpoint
+@app.get("/")
+async def root():
+    return {"message": "Welcome to Nexus Communicator Backend"}
+
+
 # Configuración para Render.com
 port = int(os.environ.get("PORT", 8000))
 
